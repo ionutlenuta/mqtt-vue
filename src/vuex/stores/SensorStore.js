@@ -3,7 +3,6 @@ const ADD_SENSOR = "ADD_SENSOR";
 const NEW_SENSOR = "NEW_SENSOR";
 const CLEAR_SENSOR = "CLEAR_SENSOR"
 
-
 export class Sensor {
   constructor(name, selectedPlace, sensorTopic, valueType) {
     this.name = name;
@@ -12,6 +11,7 @@ export class Sensor {
     this.valueType = valueType;
   }
 }
+
 const SensorStore = {
   namespaced: true,
 
@@ -24,7 +24,7 @@ const SensorStore = {
     [NEW](state) {
       state={
         sensors:[],
-        sensor:  new Sensor()
+        sensor: new Sensor("","","","")
       }
       return state;
     },
@@ -38,7 +38,7 @@ const SensorStore = {
     },
 
     [CLEAR_SENSOR](state) {
-      state.sensor=new Sensor();
+      state.sensor=new Sensor("","","","");
       return state.sensor;
     }
   },
@@ -54,7 +54,6 @@ const SensorStore = {
       commit(CLEAR_SENSOR);
     }
   }
-
 };
 
 export default SensorStore;

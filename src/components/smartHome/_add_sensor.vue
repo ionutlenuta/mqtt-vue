@@ -65,15 +65,8 @@ export default {
       showImportModal: false,
       places:['Living Room','Dorm Room', 'Kitchen', 'Garage', 'Hallway'],
       valueType: ['Boolean','Integer','Double','Float','String','JSON'],
-      // form: {
-      //   name: '',
-      //   selectedPlace:'',
-      //   sensorTopic: '',
-      //   valueType: '',
-      // }
     };
   },
-
 
   computed: {
     validForm() {

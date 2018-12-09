@@ -4,14 +4,13 @@ b-card(no-body)
     b-tab(title='Livingroom', active)
       view-sensors
     b-tab(title='Dormroom')
-      | Tab Contents 2
+      view-sensors
     b-tab(title='Kitchen')
-      | Tab Contents 3
+      view-sensors
     b-tab(title='Garage')
-      | Tab Contents 4
+      view-sensors
     b-tab(title='Hallway')
-      | Tab Contents 5
-
+      view-sensors
 
 </template>
 
@@ -22,6 +21,5 @@ export default {
   components: {
     ViewSensors
   }
-
 }
 </script>

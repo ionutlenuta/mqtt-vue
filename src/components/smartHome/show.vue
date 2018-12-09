@@ -12,6 +12,7 @@ export default {
   components: {
     TabbedComponents
   },
+
   mounted() {
     this.$store.dispatch("SensorStore/new");
   },
