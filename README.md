@@ -1,4 +1,10 @@
 # mqtt-vue
+## Install yarn
+ ## Windows
+  ```Download and install node -> https://nodejs.org/en/download/ ```
+  ``` Download and install yarn -> https://yarnpkg.com/lang/en/docs/install/#windows-stable ```
+ ## macOS
+  ``` brew install yarn ```
 
 ## Project setup
 ```
