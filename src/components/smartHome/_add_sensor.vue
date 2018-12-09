@@ -12,7 +12,7 @@ div
           centered
           )
       b-form
-        b-form-group.text-left(label="Add a new sensor")
+        b-form-group.text-left(:label="label")
           b-form-textarea.mt-2(
                           type="text"
                           size="md"
@@ -58,8 +58,7 @@ div
 import { mapState } from "vuex";
 
 export default {
-
-  props: ['allSensors'],
+  props: ['allSensors', 'topicTitle'],
   data() {
     return {
       showImportModal: false,
@@ -79,7 +78,11 @@ export default {
 
     ...mapState({
       form: state => state.SensorStore.sensor
-    })
+    }),
+
+    label() {
+      return `Add a new sensor to ${this.topicTitle}`
+    }
   },
 
   mounted() {

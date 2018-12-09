@@ -2,16 +2,15 @@
 b-card(no-body)
   b-tabs(card)
     b-tab(title='Livingroom', active)
-      view-sensors
+      view-sensors(topicTitle="livingroom")
     b-tab(title='Dormroom')
-      view-sensors
+      view-sensors(topicTitle="dormroom")
     b-tab(title='Kitchen')
-      view-sensors
+      view-sensors(topicTitle="kitchen")
     b-tab(title='Garage')
-      view-sensors
+      view-sensors(topicTitle="garage")
     b-tab(title='Hallway')
-      view-sensors
-
+      view-sensors(topicTitle="hallway")
 </template>
 
 <script>

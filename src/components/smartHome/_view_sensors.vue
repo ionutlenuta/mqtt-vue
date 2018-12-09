@@ -8,13 +8,14 @@ div
         h6 {{sensor.value}}
   .row.mt-5.justify-content-center
     .col-2
-      add-sensor(:allSensors="allSensors")
+      add-sensor(:allSensors="allSensors", :topicTitle="topicTitle")
 </template>
 
 <script>
 import AddSensor from "./_add_sensor.vue"
 
 export default {
+  props: ['topicTitle'],
   data(){
     return {
       allSensors:[
