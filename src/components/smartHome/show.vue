@@ -1,7 +1,7 @@
 <template lang="pug">
 .div
   .row.justify-content-center
-    .col-8
+    .col-lg-8.col-12
       tabbed-components.border.mt-5
 </template>
 

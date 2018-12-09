@@ -7,7 +7,7 @@ div
       .col-6.text-center
         h6 {{sensor.value}}
   .row.mt-5.justify-content-center
-    .col-2
+    .col-lg-2.col-6
       add-sensor(:allSensors="allSensors", :topicTitle="topicTitle")
 </template>
 
