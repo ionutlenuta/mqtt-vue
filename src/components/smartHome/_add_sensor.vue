@@ -77,7 +77,8 @@ export default {
     },
 
     ...mapState({
-      form: state => state.SensorStore.sensor
+      form: state => state.SensorStore.sensor,
+      sensors: state => state.SensorStore.sensors
     }),
 
     label() {
@@ -87,11 +88,18 @@ export default {
 
   mounted() {
     this.$store.dispatch("SensorStore/new");
+    if(!!localStorage.getItem('sensors')){
+      let sensors = []
+      localStorage.setItem('sensors', JSON.stringify(sensors))
+    }
   },
 
   methods: {
     onSubmit() {
       this.$store.dispatch("SensorStore/newSensor", this.form)
+      var oldSensors = JSON.parse(localStorage.getItem('sensors')) || [];
+      oldSensors.push(this.sensors);
+      localStorage.setItem('sensors',JSON.stringify(oldSensors));
       this.showImportModal = false;
     },
 

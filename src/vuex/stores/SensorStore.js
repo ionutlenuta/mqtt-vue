@@ -23,7 +23,7 @@ const SensorStore = {
   mutations: {
     [NEW](state) {
       state={
-        sensors:[],
+        sensors: JSON.parse(localStorage.getItem('sensors')),
         sensor: new Sensor("","","","")
       }
       return state;
