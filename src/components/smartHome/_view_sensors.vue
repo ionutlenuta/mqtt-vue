@@ -5,7 +5,7 @@ div
       .col-6.text-center
         h6.font-weight-bold.text-primary {{sensor.name}}
       .col-6.text-center
-        h6 {{sensor.value}}
+        h6.font-weight-bold.text-danger {{sensor.value}}
   .row.mt-5.justify-content-center
     .col-lg-2.col-6
       add-sensor(:allSensors="allSensors", :topicTitle="topicTitle")

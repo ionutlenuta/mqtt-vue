@@ -88,7 +88,7 @@ export default {
 
   mounted() {
     this.$store.dispatch("SensorStore/new");
-    if(!!localStorage.getItem('sensors')){
+    if(JSON.parse(localStorage.getItem('sensors').length===0)){
       let sensors = []
       localStorage.setItem('sensors', JSON.stringify(sensors))
     }
